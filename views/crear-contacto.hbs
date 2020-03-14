@@ -1,0 +1,24 @@
+<form action="/crear-contacto" method="POST">
+    <h2>{{nombrePagina}}</h2>
+    {{#if errores}}
+        {{#each errores}}
+            <li>{{this}}</li>
+        {{/each}}
+    {{/if}}
+    {{#if error}}
+        <li>{{error}}</li>
+    {{/if}}
+    <div class="form-group">
+        <label>Nombre</label>
+        <input type="text" name="nombre" class="form-control" value="{{input.nombre}}" placeholder="Tu nombre">
+    </div>
+    <div class="form-group">
+        <label>Email</label>
+        <input type="email" name="email" class="form-control" value="{{input.email}}" placeholder="Tu email">
+    </div>
+    <div class="form-group">
+        <label>Celular</label>
+        <input type="text" name="celular" class="form-control" value="{{input.celular}}" placeholder="Tu celular">
+    </div>
+    <button type="submit" class="btn btn-primary">Guardar Contacto</button>
+</form>

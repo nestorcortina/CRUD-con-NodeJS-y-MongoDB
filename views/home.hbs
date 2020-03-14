@@ -1,0 +1,40 @@
+<div class="col-12">
+    <h2>{{nombrePagina}}</h2>
+</div>
+<div class="col-12">
+    {{#if contacto}}
+    <div class="table-responsive">
+        <table class="table table-sm">
+            <thead>
+                <tr>
+                    <th scope="col">Key</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Celular</th>
+                    <th scope="col">Editar / Eliminar</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each contacto}}
+                <tr>
+                    <th scope="row">{{id}}</th>
+                    <td>{{nombre}}</td>
+                    <td>{{email}}</td>
+                    <td>{{celular}}</td>
+                    <td>
+                        <a href="/editar-contacto/{{id}}" class="btn btn-secondary">
+                            <i class="fas fa-user-edit"></i>
+                        </a>
+                        <a href="/eliminar-contacto/{{id}}" class="btn btn-danger">
+                            <i class="far fa-trash-alt"></i>
+                        </a>
+                    </td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+    {{else}}
+    <p>No hay contactos</p>
+    {{/if}}
+</div>

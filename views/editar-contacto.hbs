@@ -1,0 +1,16 @@
+<form action="/editar-contacto/{{contacto.id}}" method="POST">
+    <h2>{{nombrePagina}}</h2>
+    <div class="form-group">
+        <label>Nombre</label>
+        <input type="text" value="{{contacto.nombre}}" name="nombre" class="form-control" placeholder="Tu nombre">
+    </div>
+    <div class="form-group">
+        <label>Email</label>
+        <input type="email" value="{{contacto.email}}" name="email" class="form-control" placeholder="Tu email">
+    </div>
+    <div class="form-group">
+        <label>Celular</label>
+        <input type="text" value="{{contacto.celular}}" name="celular" class="form-control" placeholder="Tu celular">
+    </div>
+    <button type="submit" class="btn btn-primary">Editar Contacto</button>
+</form>
